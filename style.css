@@ -1,0 +1,137 @@
+:root {
+    --tet-red: #d32f2f;
+    --tet-yellow: #fbc02d;
+    --tet-bg: #fffbf0;
+    --text-color: #4a4a4a;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--tet-bg);
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+
+header {
+    background: linear-gradient(135deg, #b71c1c, #f44336);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 5px solid var(--tet-yellow);
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 0 #8b0000;
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: var(--tet-yellow);
+    font-weight: bold;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    columns: 3 320px;
+    column-gap: 25px;
+}
+
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    break-inside: avoid;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 1px solid #ffe0b2;
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: "🧧";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+}
+
+.card-img {
+    width: 100%;
+    border-bottom: 3px solid var(--tet-yellow);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h2 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--tet-red);
+    font-size: 2rem;
+    margin-top: 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.author {
+    margin-top: 15px;
+    text-align: right;
+    font-weight: bold;
+    font-style: italic;
+    color: #d84315;
+}
+
+
+.special-yellow { background: #fffde7; }
+.special-pink { background: #ffebee; }
+
+.doi-tet {
+    text-align: center;
+    font-weight: bold;
+    color: #b71c1c;
+}
+
+
+.flower {
+    position: fixed;
+    top: -10vh;
+    z-index: 9999;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    from { transform: translateY(0) rotate(0deg); opacity: 1; }
+    to   { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+
+footer {
+    background: #3e2723;
+    color: var(--tet-yellow);
+    text-align: center;
+    padding: 30px;
+    border-top: 5px solid var(--tet-red);
+}
+
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .container { columns: 1; }
+}
